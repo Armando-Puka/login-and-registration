@@ -1,0 +1,44 @@
+@model User
+
+<div class="row">
+    <h1 class="text-center mb-4">Register</h1>
+
+    <div class="col-8 offset-md-2 border border-2 border-dark rounded p-4 m-auto">
+        <form asp-action="Register" method="post">
+            <div class="form-group mb-3">
+                <label asp-for="Name" class="mb-1">Name</label>
+                <input asp-for="Name" class="form-control border border-2 border-dark rounded">
+                <span asp-validation-for="Name" class="text-danger mb-1"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="LastName" class="mb-1">Last Name</label>
+                <input asp-for="LastName" class="form-control border border-2 border-dark rounded">
+                <span asp-validation-for="LastName" class="text-danger mb-1"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Email" class="mb-1">Email Address</label>
+                <input asp-for="Email" class="form-control border border-2 border-dark rounded">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label asp-for="Password" class="mb-1">Password</label>
+                <input asp-for="Password" class="form-control border border-2 border-dark rounded">
+                <span asp-validation-for="Password" class="text-danger mb-1"></span>
+            </div>
+            
+            
+            <div class="form-group mb-3">
+                <label asp-for="PasswordConfirm" class="mb-1">Confirm Password</label>
+                <input asp-for="PasswordConfirm" class="form-control border border-2 border-dark rounded">
+                <span asp-validation-for="PasswordConfirm" class="text-danger mb-1"></span>
+            </div>
+            
+            <div class="form-group d-flex justify-content-end">
+                <input type="submit" class="btn btn-outline-dark border border-dark border-2" value="Register">
+            </div>
+        </form>
+    </div>
+</div>
